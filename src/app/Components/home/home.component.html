@@ -17,10 +17,41 @@
         <div class="timeline-content">
           <h3>{{event.title}}</h3>
           <p>{{event.description}}</p>
+          <div class="achievements" *ngIf="event.achievements">
+            <h4>Achievements</h4>
+            <ul>
+              <li *ngFor="let achievement of event.achievements; let i = index">
+                {{achievement}}
+                <span class="view-icon" (click)="openDriveLink(event.achievementLinks[i])" *ngIf="event.achievementLinks && event.achievementLinks[i]">
+                  <span class="cartoon-eye">
+                    <span class="eye-lid"></span>
+                    <span class="eye-ball">
+                      <span class="pupil"></span>
+                    </span>
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
+          <div class="certifications" *ngIf="event.certifications">
+            <h4>Certifications</h4>
+            <ul>
+              <li *ngFor="let certification of event.certifications; let i = index">
+                {{certification}}
+                <span class="view-icon" (click)="openDriveLink(event.certificationLinks[i])" *ngIf="event.certificationLinks && event.certificationLinks[i]">
+                  <span class="cartoon-eye">
+                    <span class="eye-lid"></span>
+                    <span class="eye-ball">
+                      <span class="pupil"></span>
+                    </span>
+                  </span>
+                </span>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-    <!-- <button class="add-event-btn" (click)="addEvent()">+ Add Event</button> -->
   </div>
 </section>
 
@@ -30,15 +61,23 @@
     <div class="skills-grid">
       <div class="skill-item">
         <h3>Frontend Development</h3>
-        <p>Angular, React, Vue.js, HTML5, CSS3, JavaScript/TypeScript</p>
+        <p>Angular, React, Vue.js, HTML5, CSS3, JavaScript/TypeScript, Asp.net</p>
       </div>
       <div class="skill-item">
         <h3>Backend Development</h3>
-        <p>Node.js, Express, Python, Django, REST APIs, Databases</p>
+        <p>C#, Vb.net, Java</p>
       </div>
       <div class="skill-item">
         <h3>UI/UX Design</h3>
-        <p>Figma, Adobe XD, User Research, Prototyping, Responsive Design</p>
+        <p>SAP Crystal Reports, Figma, Responsive Design</p>
+      </div>
+      <div class="skill-item">
+        <h3>Data Bases</h3>
+        <p>SQL Server, My Sql, PosgreSql</p>
+      </div>
+       <div class="skill-item">
+        <h3>Frameworks</h3>
+        <p>ASP .Net Core MVC , Spring Boot</p>
       </div>
     </div>
   </div>
