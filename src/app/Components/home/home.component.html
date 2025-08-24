@@ -1,0 +1,45 @@
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <h1>Deepak S</h1>
+      <p>Frameworks change, tools evolve. Problem-solving is what endures. Not bound by tech stacks — I engineer solutions.</p> 
+      <a routerLink="/contact" class="btn">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="container">
+    <h2>My Journey</h2>
+    <div class="timeline">
+      <div class="timeline-event" *ngFor="let event of timelineEvents">
+        <div class="timeline-year">{{event.year}}</div>
+        <div class="timeline-content">
+          <h3>{{event.title}}</h3>
+          <p>{{event.description}}</p>
+        </div>
+      </div>
+    </div>
+    <!-- <button class="add-event-btn" (click)="addEvent()">+ Add Event</button> -->
+  </div>
+</section>
+
+<section class="skills">
+  <div class="container">
+    <h2>Skills & Expertise</h2>
+    <div class="skills-grid">
+      <div class="skill-item">
+        <h3>Frontend Development</h3>
+        <p>Angular, React, Vue.js, HTML5, CSS3, JavaScript/TypeScript</p>
+      </div>
+      <div class="skill-item">
+        <h3>Backend Development</h3>
+        <p>Node.js, Express, Python, Django, REST APIs, Databases</p>
+      </div>
+      <div class="skill-item">
+        <h3>UI/UX Design</h3>
+        <p>Figma, Adobe XD, User Research, Prototyping, Responsive Design</p>
+      </div>
+    </div>
+  </div>
+</section>
